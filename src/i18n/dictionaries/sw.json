@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Nyumbani",
+    "history": "Historia",
+    "stories": "Hadithi",
+    "churches": "Mahelo",
+    "leaders": "Viongozi",
+    "contact": "Wasiliana",
+    "menu": "Menyu"
+  },
+  "hero": {
+    "subtitle": "Kanisa la Tatu",
+    "tagline": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda.",
+    "cta1": "Historia yetu",
+    "cta2": "Soma hadithi zetu"
+  },
+  "home": {
+    "aboutTitle": "Imani yenye mizizi katika historia",
+    "aboutP1": "Ilianzishwa mwaka {year} mashariki mwa Kasaï na Bakwalufu Tshiyombo Tshilobo na kuanzishwa upya tarehe 3 Novemba 1983 huko Bi'esse-Baraka na Nabii wa 2 Tata Wahiseelelwa Neno, Kanisa la Tatu Malkia wa Ubembe ni Kanisa la kipindi cha tatu cha imani — kile cha Roho Mtakatifu.",
+    "aboutP2": "Kwa jina la Bakwalufu Tshiyombo Tshilobo, la Wahiseelelwa, na la Malkia wa Ubembe — imani yetu inatangaza: Kristu ameshuka, Shetani amefungwa milele, Kanisa limepanda.",
+    "timelineTitle": "Wakati muhimu",
+    "timelineLink": "Ona historia yote",
+    "storiesTitle": "Hadithi",
+    "storiesLink": "Hadithi zote",
+    "churchesTitle": "Mahelo yetu",
+    "churchesCount": "Mahelo {count} katika DRC na zaidi.",
+    "churchesLink": "Ona Mahelo {count}"
+  },
+  "history": {
+    "title": "Historia yetu",
+    "subtitle": "Wakati uliounda Kanisa la Tatu Malkia wa Ubembe.",
+    "empty": "Hakuna matukio ya kihistoria yaliyoongezwa bado."
+  },
+  "stories": {
+    "title": "Hadithi",
+    "subtitle": "Hadithi, ushuhuda na wakati wa maisha ya jamii yetu.",
+    "empty": "Hakuna hadithi iliyochapishwa bado.",
+    "back": "Hadithi"
+  },
+  "churches": {
+    "title": "Mahelo yetu",
+    "subtitle": "Mahelo {count} za kwanza za Kanisa la Tatu na waongozi wao.",
+    "search": "Tafuta Mahelo, mahali au mwongozi...",
+    "allCountries": "Nchi zote",
+    "count": "Mahelo {count}",
+    "countOf": "Mahelo {count} kati ya {total}",
+    "hq": "Makao Makuu",
+    "empty": "Hakuna Mahelo inayolingana na utafutaji wako.",
+    "source": "Orodha ya Mahelo na waongozi wao — Communication ya 10-4-38 huko Bi'esse Central",
+    "colNumber": "N°",
+    "colName": "Mahelo",
+    "colLocation": "Mahali",
+    "colLeader": "Mwongozi"
+  },
+  "leaders": {
+    "title": "Viongozi",
+    "subtitle": "Wale walioongoza na wanaoongoza Kanisa la Tatu katika utume wake wa kiroho.",
+    "structureTitle": "Muundo wa Kanisa",
+    "structureSubtitle": "Mpangilio wa daraja kama ulivyoelezwa katika Communication n° 258.",
+    "spiritualTitle": "Uongozi wa kiroho",
+    "empty": "Hakuna kiongozi aliyeongezwa bado.",
+    "churchLabel": "Kanisa"
+  },
+  "contact": {
+    "title": "Wasiliana",
+    "subtitle": "Jiunge na jamii yetu au uliza maswali yako.",
+    "formTitle": "Tuandikie",
+    "name": "Jina kamili",
+    "email": "Barua pepe",
+    "message": "Ujumbe",
+    "send": "Tuma",
+    "addressTitle": "Anwani zetu",
+    "hqLabel": "Makao Makuu — DRC",
+    "usLabel": "Marekani",
+    "socialLabel": "Mitandao ya kijamii"
+  },
+  "orgChart": {
+    "select": "Chagua kipengele kuona maelezo yake.",
+    "close": "Funga",
+    "source": "Communication n° 258"
+  },
+  "footer": {
+    "description": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda. Ilianzishwa mwaka 1923 na Bakwalufu Tshiyombo Tshilobo na kuanzishwa upya tarehe 3 Novemba 1983 huko Bi'esse-Baraka, Fizi, Sud-Kivu, DRC.",
+    "navTitle": "Urambazaji",
+    "contactTitle": "Wasiliana"
+  }
+}

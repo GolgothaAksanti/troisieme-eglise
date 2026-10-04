@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "history": "Histoire",
+    "stories": "Récits",
+    "churches": "Églises",
+    "leaders": "Dirigeants",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "hero": {
+    "subtitle": "Troisième Église",
+    "tagline": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda.",
+    "cta1": "Notre histoire",
+    "cta2": "Lire nos récits"
+  },
+  "home": {
+    "aboutTitle": "Une foi enracinée dans l'histoire",
+    "aboutP1": "Fondée en {year} dans l'est du Kasaï par Bakwalufu Tshiyombo Tshilobo et rétablie le 3 novembre 1983 à Bi'esse-Baraka par le 2ème Prophète Tata Wahiseelelwa Neno, la Troisième Église Malkia wa Ubembe est l'Église de la troisième période de la foi — celle du Saint-Esprit.",
+    "aboutP2": "Au nom de Bakwalufu Tshiyombo Tshilobo, de Wahiseelelwa, et de Malkia wa Ubembe — notre foi proclame : le Christ est descendu, Satan est enchaîné pour l'éternité, l'Église est montée.",
+    "timelineTitle": "Moments clés",
+    "timelineLink": "Voir toute l'histoire",
+    "storiesTitle": "Récits",
+    "storiesLink": "Tous les récits",
+    "churchesTitle": "Nos Mahelo",
+    "churchesCount": "{count} Mahelo à travers la RDC et au-delà.",
+    "churchesLink": "Voir les {count} Mahelo"
+  },
+  "history": {
+    "title": "Notre histoire",
+    "subtitle": "Les moments qui ont façonné la Troisième Église Malkia wa Ubembe.",
+    "empty": "Aucun événement historique n'a encore été ajouté."
+  },
+  "stories": {
+    "title": "Récits",
+    "subtitle": "Histoires, témoignages et moments de vie de notre communauté.",
+    "empty": "Aucun récit n'a encore été publié.",
+    "back": "Récits"
+  },
+  "churches": {
+    "title": "Nos Mahelo",
+    "subtitle": "Les {count} premières Mahelo de la Troisième Église et leurs responsables.",
+    "search": "Rechercher une Mahelo, un lieu ou un responsable...",
+    "allCountries": "Tous les pays",
+    "count": "{count} Mahelo",
+    "countOf": "{count} Mahelo sur {total}",
+    "hq": "Siège",
+    "empty": "Aucune Mahelo ne correspond à votre recherche.",
+    "source": "Liste des Mahelo et leurs responsables — Communication du 10-4-38 à Bi'esse Central",
+    "colNumber": "N°",
+    "colName": "Mahelo",
+    "colLocation": "Lieu",
+    "colLeader": "Responsable"
+  },
+  "leaders": {
+    "title": "Dirigeants",
+    "subtitle": "Ceux qui ont guidé et guident la Troisième Église dans sa mission spirituelle.",
+    "structureTitle": "Structure de l'Église",
+    "structureSubtitle": "Organisation hiérarchique telle que définie dans la Communication n° 258.",
+    "spiritualTitle": "Direction spirituelle",
+    "empty": "Aucun dirigeant n'a encore été ajouté.",
+    "churchLabel": "Église"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Rejoignez notre communauté ou posez vos questions.",
+    "formTitle": "Écrivez-nous",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "message": "Message",
+    "send": "Envoyer",
+    "addressTitle": "Nos adresses",
+    "hqLabel": "Siège — RD Congo",
+    "usLabel": "États-Unis",
+    "socialLabel": "Réseaux sociaux"
+  },
+  "orgChart": {
+    "select": "Sélectionnez un élément pour voir ses détails.",
+    "close": "Fermer",
+    "source": "Communication n° 258"
+  },
+  "footer": {
+    "description": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda. Fondée en 1923 par Bakwalufu Tshiyombo Tshilobo et rétablie le 3 novembre 1983 à Bi'esse-Baraka, Fizi, Sud-Kivu, RDC.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Home",
+    "history": "History",
+    "stories": "Stories",
+    "churches": "Churches",
+    "leaders": "Leaders",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "hero": {
+    "subtitle": "Third Church",
+    "tagline": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda.",
+    "cta1": "Our history",
+    "cta2": "Read our stories"
+  },
+  "home": {
+    "aboutTitle": "A faith rooted in history",
+    "aboutP1": "Founded in {year} in eastern Kasaï by Bakwalufu Tshiyombo Tshilobo and reestablished on November 3, 1983 in Bi'esse-Baraka by the 2nd Prophet Tata Wahiseelelwa Neno, the Third Church Malkia wa Ubembe is the Church of the third period of faith — that of the Holy Spirit.",
+    "aboutP2": "In the name of Bakwalufu Tshiyombo Tshilobo, of Wahiseelelwa, and of Malkia wa Ubembe — our faith proclaims: Christ has descended, Satan is bound for eternity, the Church has ascended.",
+    "timelineTitle": "Key moments",
+    "timelineLink": "See full history",
+    "storiesTitle": "Stories",
+    "storiesLink": "All stories",
+    "churchesTitle": "Our Mahelo",
+    "churchesCount": "{count} Mahelo across the DRC and beyond.",
+    "churchesLink": "See all {count} Mahelo"
+  },
+  "history": {
+    "title": "Our history",
+    "subtitle": "The moments that shaped the Third Church Malkia wa Ubembe.",
+    "empty": "No historical events have been added yet."
+  },
+  "stories": {
+    "title": "Stories",
+    "subtitle": "Stories, testimonies and moments of life from our community.",
+    "empty": "No stories have been published yet.",
+    "back": "Stories"
+  },
+  "churches": {
+    "title": "Our Mahelo",
+    "subtitle": "The first {count} Mahelo of the Third Church and their leaders.",
+    "search": "Search a Mahelo, location or leader...",
+    "allCountries": "All countries",
+    "count": "{count} Mahelo",
+    "countOf": "{count} Mahelo of {total}",
+    "hq": "Headquarters",
+    "empty": "No Mahelo matches your search.",
+    "source": "List of Mahelo and their leaders — Communication of 10-4-38 at Bi'esse Central",
+    "colNumber": "No.",
+    "colName": "Mahelo",
+    "colLocation": "Location",
+    "colLeader": "Leader"
+  },
+  "leaders": {
+    "title": "Leaders",
+    "subtitle": "Those who have guided and guide the Third Church in its spiritual mission.",
+    "structureTitle": "Church Structure",
+    "structureSubtitle": "Hierarchical organization as defined in Communication No. 258.",
+    "spiritualTitle": "Spiritual leadership",
+    "empty": "No leaders have been added yet.",
+    "churchLabel": "Church"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Join our community or ask your questions.",
+    "formTitle": "Write to us",
+    "name": "Full name",
+    "email": "Email address",
+    "message": "Message",
+    "send": "Send",
+    "addressTitle": "Our addresses",
+    "hqLabel": "Headquarters — DR Congo",
+    "usLabel": "United States",
+    "socialLabel": "Social media"
+  },
+  "orgChart": {
+    "select": "Select an element to see its details.",
+    "close": "Close",
+    "source": "Communication No. 258"
+  },
+  "footer": {
+    "description": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda. Founded in 1923 by Bakwalufu Tshiyombo Tshilobo and reestablished on November 3, 1983 in Bi'esse-Baraka, Fizi, Sud-Kivu, DRC.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact"
+  }
+}
