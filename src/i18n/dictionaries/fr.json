@@ -5,6 +5,9 @@
     "stories": "Récits",
     "churches": "Églises",
     "leaders": "Dirigeants",
+    "elders": "24 Vieillards",
+    "events": "Événements",
+    "about": "L'Église",
     "contact": "Contact",
     "menu": "Menu"
   },
@@ -24,7 +27,27 @@
     "storiesLink": "Tous les récits",
     "churchesTitle": "Nos Mahelo",
     "churchesCount": "{count} Mahelo à travers la RDC et au-delà.",
-    "churchesLink": "Voir les {count} Mahelo"
+    "churchesLink": "Voir les {count} Mahelo",
+    "eventsTitle": "Événements",
+    "eventsEmpty": "Aucun événement à afficher pour le moment.",
+    "eventPast": "Passé",
+    "eventOngoing": "En cours",
+    "eventUpcoming": "À venir",
+    "eventsLink": "Tous les événements"
+  },
+  "events": {
+    "title": "Événements",
+    "subtitle": "Retrouvez tous les événements passés, en cours et à venir de la Troisième Église.",
+    "all": "Tous",
+    "past": "Passés",
+    "ongoing": "En cours",
+    "upcoming": "À venir",
+    "empty": "Aucun événement dans cette catégorie.",
+    "back": "Événements",
+    "date": "Date",
+    "location": "Lieu",
+    "details": "Voir les détails",
+    "status": "Statut"
   },
   "history": {
     "title": "Notre histoire",
@@ -51,6 +74,11 @@
     "colName": "Mahelo",
     "colLocation": "Lieu",
     "colLeader": "Responsable"
+  },
+  "elders": {
+    "title": "Les 24 Vieillards",
+    "subtitle": "Les vingt-quatre vieillards de la Troisième Église Malkia wa Ubembe.",
+    "empty": "Aucun vieillard n'a encore été ajouté."
   },
   "leaders": {
     "title": "Dirigeants",
@@ -80,8 +108,13 @@
     "source": "Communication n° 258"
   },
   "footer": {
-    "description": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda. Fondée en 1923 par Bakwalufu Tshiyombo Tshilobo et rétablie le 3 novembre 1983 à Bi'esse-Baraka, Fizi, Sud-Kivu, RDC.",
-    "navTitle": "Navigation",
-    "contactTitle": "Contact"
+    "description": "Fondée en 1923 par Bakwalufu Tshiyombo Tshilobo et rétablie le 3 novembre 1983 à Bi'esse-Baraka par le 2ème Prophète Tata Wahiseelelwa Neno.",
+    "creed": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda.",
+    "discoverTitle": "Découvrir",
+    "aboutTitle": "L'Église",
+    "connectTitle": "Nous rejoindre",
+    "hqLabel": "Siège — RD Congo",
+    "usLabel": "États-Unis",
+    "rights": "Tous droits réservés."
   }
 }

@@ -1,19 +1,22 @@
 import Link from "next/link";
 import { getDictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
-import { getSiteInfo, getStories, getHistoryEvents, getChurches } from "@/lib/data";
+import { getSiteInfo, getStories, getHistoryEvents, getChurches, getEvents } from "@/lib/data";
+import EventsCarousel from "@/components/EventsCarousel";
+import Logo3 from "@/components/Logo3";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
   const loc = locale as Locale;
-  const [dict, site, storiesData, history, churches] = await Promise.all([
+  const [dict, site, storiesData, history, churches, eventsData] = await Promise.all([
     getDictionary(loc),
     getSiteInfo(loc),
     getStories(loc),
     getHistoryEvents(loc),
     getChurches(),
+    getEvents(loc),
   ]);
 
   const latestStories = storiesData.slice(0, 3);
@@ -21,14 +24,38 @@ export default async function Home({ params }: Props) {
 
   return (
     <>
-      <section className="flex min-h-[85vh] flex-col items-center justify-center bg-green-mid px-4 pt-16 text-center sm:px-6">
-        <div className="max-w-3xl">
-          <p className="mb-6 text-xs tracking-[0.25em] text-green-deep/70 sm:text-sm">{dict.hero.subtitle}</p>
-          <h1 className="mb-6 text-4xl font-light leading-tight text-white sm:mb-8 sm:text-6xl md:text-7xl">Malkia wa Ubembe</h1>
-          <p className="mx-auto max-w-md text-sm leading-relaxed text-green-deep/80 sm:max-w-lg sm:text-base">{dict.hero.tagline}</p>
-          <div className="mt-10 flex flex-col items-center gap-3 sm:mt-12 sm:flex-row sm:justify-center sm:gap-4">
-            <Link href={`/${locale}/histoire`} className="inline-block w-full bg-green-deep px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-green-dark sm:w-auto">{dict.hero.cta1}</Link>
-            <Link href={`/${locale}/recits`} className="inline-block w-full border border-green-deep/30 px-8 py-3 text-sm font-medium text-green-deep transition-colors hover:border-green-deep/60 sm:w-auto">{dict.hero.cta2}</Link>
+      {/* ── Hero with events carousel ── */}
+      <section className="bg-green-mid px-4 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-32">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            {/* Left — branding */}
+            <div className="text-center lg:text-left">
+              <Logo3 size="xl" className="mb-4 text-white/90" />
+              <p className="mb-4 text-xs tracking-[0.25em] text-green-deep/70 sm:text-sm">{dict.hero.subtitle}</p>
+              <h1 className="mb-5 text-4xl font-light leading-tight text-white sm:mb-6 sm:text-5xl md:text-6xl">Malkia wa Ubembe</h1>
+              <p className="mx-auto max-w-md text-sm leading-relaxed text-green-deep/80 sm:text-base lg:mx-0">{dict.hero.tagline}</p>
+              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start sm:gap-4">
+                <Link href={`/${locale}/histoire`} className="inline-block w-full bg-green-deep px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-green-dark sm:w-auto">{dict.hero.cta1}</Link>
+                <Link href={`/${locale}/recits`} className="inline-block w-full border border-green-deep/30 px-8 py-3 text-sm font-medium text-green-deep transition-colors hover:border-green-deep/60 sm:w-auto">{dict.hero.cta2}</Link>
+              </div>
+            </div>
+
+            {/* Right — events carousel */}
+            {eventsData.length > 0 && (
+              <div className="mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
+                <EventsCarousel
+                  events={eventsData}
+                  locale={locale}
+                  labels={{
+                    past: dict.home.eventPast,
+                    ongoing: dict.home.eventOngoing,
+                    upcoming: dict.home.eventUpcoming,
+                    details: dict.events.details,
+                    allEvents: dict.home.eventsLink,
+                  }}
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>

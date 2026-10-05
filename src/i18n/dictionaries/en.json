@@ -5,6 +5,9 @@
     "stories": "Stories",
     "churches": "Churches",
     "leaders": "Leaders",
+    "elders": "24 Elders",
+    "events": "Events",
+    "about": "The Church",
     "contact": "Contact",
     "menu": "Menu"
   },
@@ -24,7 +27,27 @@
     "storiesLink": "All stories",
     "churchesTitle": "Our Mahelo",
     "churchesCount": "{count} Mahelo across the DRC and beyond.",
-    "churchesLink": "See all {count} Mahelo"
+    "churchesLink": "See all {count} Mahelo",
+    "eventsTitle": "Events",
+    "eventsEmpty": "No events to display at this time.",
+    "eventPast": "Past",
+    "eventOngoing": "Ongoing",
+    "eventUpcoming": "Upcoming",
+    "eventsLink": "All events"
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Browse all past, ongoing and upcoming events of the Third Church.",
+    "all": "All",
+    "past": "Past",
+    "ongoing": "Ongoing",
+    "upcoming": "Upcoming",
+    "empty": "No events in this category.",
+    "back": "Events",
+    "date": "Date",
+    "location": "Location",
+    "details": "View details",
+    "status": "Status"
   },
   "history": {
     "title": "Our history",
@@ -51,6 +74,11 @@
     "colName": "Mahelo",
     "colLocation": "Location",
     "colLeader": "Leader"
+  },
+  "elders": {
+    "title": "The 24 Elders",
+    "subtitle": "The twenty-four elders of the Third Church Malkia wa Ubembe.",
+    "empty": "No elders have been added yet."
   },
   "leaders": {
     "title": "Leaders",
@@ -80,8 +108,13 @@
     "source": "Communication No. 258"
   },
   "footer": {
-    "description": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda. Founded in 1923 by Bakwalufu Tshiyombo Tshilobo and reestablished on November 3, 1983 in Bi'esse-Baraka, Fizi, Sud-Kivu, DRC.",
-    "navTitle": "Navigation",
-    "contactTitle": "Contact"
+    "description": "Founded in 1923 by Bakwalufu Tshiyombo Tshilobo and reestablished on November 3, 1983 in Bi'esse-Baraka by the 2nd Prophet Tata Wahiseelelwa Neno.",
+    "creed": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda.",
+    "discoverTitle": "Discover",
+    "aboutTitle": "The Church",
+    "connectTitle": "Connect",
+    "hqLabel": "Headquarters — DR Congo",
+    "usLabel": "United States",
+    "rights": "All rights reserved."
   }
 }

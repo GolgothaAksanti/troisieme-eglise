@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import type { Church } from "@/types";
 import type { Locale } from "@/i18n/config";
@@ -13,6 +13,8 @@ export default function Eglises() {
   const [dict, setDict] = useState<Record<string, string>>({});
   const [search, setSearch] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("all");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     import("@/data/churches").then((mod) => {
@@ -25,7 +27,26 @@ export default function Eglises() {
     });
   }, [locale]);
 
+  useEffect(() => {
+    function onClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    }
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setDropdownOpen(false);
+    }
+    document.addEventListener("click", onClickOutside);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("click", onClickOutside);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, []);
+
   const countries = Array.from(new Set(churches.map((c) => c.country)));
+  const allLabel = dict.allCountries || "All";
+  const selectedLabel = selectedCountry === "all" ? allLabel : selectedCountry;
 
   const filtered = churches.filter((c) => {
     const leader = c.leaderId ? maheloLeaders[c.leaderId] : "";
@@ -53,7 +74,7 @@ export default function Eglises() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-6 flex flex-col gap-3 sm:mb-8 sm:flex-row sm:items-center sm:gap-4">
             <div className="relative flex-1">
-              <svg className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-grey-light" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <svg className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-grey-light" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <circle cx="9" cy="9" r="6" /><path d="M13.5 13.5L17 17" />
               </svg>
               <input
@@ -61,14 +82,84 @@ export default function Eglises() {
                 placeholder={dict.search || ""}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full rounded-lg border border-green-mid/15 bg-off-white py-2.5 pl-10 pr-4 text-sm text-text outline-none transition-colors placeholder:text-grey-light focus:border-green-mid"
+                className="w-full rounded-xl border border-green-mid/15 bg-off-white py-3 pl-11 pr-4 text-sm text-text outline-none transition-all placeholder:text-grey-light focus:border-green-mid focus:ring-2 focus:ring-green-mid/10"
               />
             </div>
             {countries.length > 1 && (
-              <select value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)} className="rounded-lg border border-green-mid/15 bg-off-white px-4 py-2.5 text-sm text-text outline-none focus:border-green-mid">
-                <option value="all">{dict.allCountries || "All"}</option>
-                {countries.map((c) => (<option key={c} value={c}>{c}</option>))}
-              </select>
+              <div className="relative shrink-0" ref={dropdownRef}>
+                <button
+                  type="button"
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className={`flex w-full items-center justify-between gap-6 rounded-xl border bg-off-white py-3 pl-4 pr-3.5 text-sm transition-all sm:w-auto ${
+                    dropdownOpen
+                      ? "border-green-mid ring-2 ring-green-mid/10"
+                      : "border-green-mid/15 hover:border-green-mid/30"
+                  }`}
+                  aria-haspopup="listbox"
+                  aria-expanded={dropdownOpen}
+                >
+                  <span className={selectedCountry === "all" ? "text-grey" : "text-text"}>
+                    {selectedLabel}
+                  </span>
+                  <svg
+                    className={`h-4 w-4 text-grey-light transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+
+                <ul
+                  role="listbox"
+                  aria-label={allLabel}
+                  className={`absolute right-0 z-20 mt-2 min-w-full overflow-hidden rounded-xl border border-green-mid/10 bg-white py-1 shadow-lg transition-all duration-200 sm:min-w-[180px] ${
+                    dropdownOpen
+                      ? "pointer-events-auto translate-y-0 opacity-100"
+                      : "pointer-events-none -translate-y-1 opacity-0"
+                  }`}
+                >
+                  <li
+                    role="option"
+                    aria-selected={selectedCountry === "all"}
+                    onClick={() => { setSelectedCountry("all"); setDropdownOpen(false); }}
+                    className={`flex cursor-pointer items-center gap-2.5 px-4 py-2.5 text-sm transition-colors ${
+                      selectedCountry === "all"
+                        ? "bg-green-pale text-green-mid font-medium"
+                        : "text-grey hover:bg-off-white hover:text-text"
+                    }`}
+                  >
+                    {selectedCountry === "all" && (
+                      <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                      </svg>
+                    )}
+                    <span className={selectedCountry === "all" ? "" : "pl-6"}>{allLabel}</span>
+                  </li>
+                  {countries.map((c) => (
+                    <li
+                      key={c}
+                      role="option"
+                      aria-selected={selectedCountry === c}
+                      onClick={() => { setSelectedCountry(c); setDropdownOpen(false); }}
+                      className={`flex cursor-pointer items-center gap-2.5 px-4 py-2.5 text-sm transition-colors ${
+                        selectedCountry === c
+                          ? "bg-green-pale text-green-mid font-medium"
+                          : "text-grey hover:bg-off-white hover:text-text"
+                      }`}
+                    >
+                      {selectedCountry === c && (
+                        <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                      )}
+                      <span className={selectedCountry === c ? "" : "pl-6"}>{c}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </div>
 

@@ -4,6 +4,8 @@ export type { Locale } from "@/i18n/config";
 export type { Story } from "@/data/stories";
 export type { HistoryEvent } from "@/data/history";
 export type { Leader } from "@/data/leaders";
+export type { Elder } from "@/data/elders";
+export type { ChurchEvent, EventStatus } from "@/data/events";
 
 export interface Church {
   id: string;

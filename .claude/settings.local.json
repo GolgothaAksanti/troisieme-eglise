@@ -14,7 +14,8 @@
       "Bash(curl -s http://localhost:3000/recits/origine-de-leglise)",
       "Bash(pdftotext \"C:/Users/Golgotha Aksanti/Documents/workspace/golgotha/troisieme/t-e-website/src/lib/COMMUNICATION A5.pdf\" -)",
       "Bash(curl -s http://localhost:3000/api/churches)",
-      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'{len\\(d\\)} churches, first: {d[0][\\\\\"name\\\\\"]} - leader: {d[0][\\\\\"leaderName\\\\\"]}'\\)\")"
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'{len\\(d\\)} churches, first: {d[0][\\\\\"name\\\\\"]} - leader: {d[0][\\\\\"leaderName\\\\\"]}'\\)\")",
+      "Bash(curl:*)"
     ]
   }
 }

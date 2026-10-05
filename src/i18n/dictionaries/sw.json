@@ -5,6 +5,9 @@
     "stories": "Hadithi",
     "churches": "Mahelo",
     "leaders": "Viongozi",
+    "elders": "Wazee 24",
+    "events": "Matukio",
+    "about": "Kanisa",
     "contact": "Wasiliana",
     "menu": "Menyu"
   },
@@ -24,7 +27,27 @@
     "storiesLink": "Hadithi zote",
     "churchesTitle": "Mahelo yetu",
     "churchesCount": "Mahelo {count} katika DRC na zaidi.",
-    "churchesLink": "Ona Mahelo {count}"
+    "churchesLink": "Ona Mahelo {count}",
+    "eventsTitle": "Matukio",
+    "eventsEmpty": "Hakuna matukio ya kuonyesha kwa sasa.",
+    "eventPast": "Yaliyopita",
+    "eventOngoing": "Yanayoendelea",
+    "eventUpcoming": "Yajayo",
+    "eventsLink": "Matukio yote"
+  },
+  "events": {
+    "title": "Matukio",
+    "subtitle": "Tazama matukio yote yaliyopita, yanayoendelea na yajayo ya Kanisa la Tatu.",
+    "all": "Yote",
+    "past": "Yaliyopita",
+    "ongoing": "Yanayoendelea",
+    "upcoming": "Yajayo",
+    "empty": "Hakuna matukio katika kategoria hii.",
+    "back": "Matukio",
+    "date": "Tarehe",
+    "location": "Mahali",
+    "details": "Tazama maelezo",
+    "status": "Hali"
   },
   "history": {
     "title": "Historia yetu",
@@ -51,6 +74,11 @@
     "colName": "Mahelo",
     "colLocation": "Mahali",
     "colLeader": "Mwongozi"
+  },
+  "elders": {
+    "title": "Wazee 24",
+    "subtitle": "Wazee ishirini na wanne wa Kanisa la Tatu Malkia wa Ubembe.",
+    "empty": "Hakuna mzee aliyeongezwa bado."
   },
   "leaders": {
     "title": "Viongozi",
@@ -80,8 +108,13 @@
     "source": "Communication n° 258"
   },
   "footer": {
-    "description": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda. Ilianzishwa mwaka 1923 na Bakwalufu Tshiyombo Tshilobo na kuanzishwa upya tarehe 3 Novemba 1983 huko Bi'esse-Baraka, Fizi, Sud-Kivu, DRC.",
-    "navTitle": "Urambazaji",
-    "contactTitle": "Wasiliana"
+    "description": "Ilianzishwa mwaka 1923 na Bakwalufu Tshiyombo Tshilobo na kuanzishwa upya tarehe 3 Novemba 1983 huko Bi'esse-Baraka na Nabii wa 2 Tata Wahiseelelwa Neno.",
+    "creed": "Kristu ameshuka — Shetani amefungwa milele — Malkia amepanda.",
+    "discoverTitle": "Gundua",
+    "aboutTitle": "Kanisa",
+    "connectTitle": "Jiunge nasi",
+    "hqLabel": "Makao Makuu — DRC",
+    "usLabel": "Marekani",
+    "rights": "Haki zote zimehifadhiwa."
   }
 }
