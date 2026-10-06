@@ -19,6 +19,10 @@ import { events } from "@/data/events";
 import type { EventStatus } from "@/data/events";
 import { churches, maheloLeaders } from "@/data/churches";
 import { getSiteData } from "@/data/site";
+import { faithPeriods, trinitarianFormula, vipajiSaba, glossary } from "@/data/doctrine";
+import { prayers } from "@/data/prayers";
+import { hymns } from "@/data/hymns";
+import { ceremonies } from "@/data/ceremonies";
 import type { Locale } from "@/i18n/config";
 
 // ── Site info ──────────────────────────────────────────────
@@ -150,4 +154,85 @@ export async function getChurches() {
 
 export async function getMaheloLeaders() {
   return maheloLeaders;
+}
+
+// ── Doctrine ─────────────────────────────────────────────
+
+export async function getFaithPeriods(locale: Locale) {
+  return faithPeriods
+    .sort((a, b) => a.order - b.order)
+    .map((p) => ({
+      id: p.id,
+      name: p.name[locale],
+      figure: p.figure,
+      description: p.description[locale],
+      promise: p.promise[locale],
+    }));
+}
+
+export async function getTrinitarianFormula(locale: Locale) {
+  return trinitarianFormula[locale];
+}
+
+export async function getVipajiSaba(locale: Locale) {
+  return vipajiSaba
+    .sort((a, b) => a.order - b.order)
+    .map((v) => ({
+      id: v.id,
+      order: v.order,
+      title: v.title[locale],
+      description: v.description[locale],
+    }));
+}
+
+export async function getGlossary(locale: Locale) {
+  return glossary.map((g) => ({
+    id: g.id,
+    term: g.term,
+    definition: g.definition[locale],
+  }));
+}
+
+// ── Prayers ──────────────────────────────────────────────
+
+export async function getPrayers(locale: Locale) {
+  return prayers
+    .sort((a, b) => a.order - b.order)
+    .map((p) => ({
+      id: p.id,
+      title: p.title[locale],
+      source: p.source,
+      text: p.text,
+      translation: p.translation[locale],
+    }));
+}
+
+// ── Hymns ────────────────────────────────────────────────
+
+export async function getHymns(locale: Locale) {
+  return hymns
+    .sort((a, b) => a.order - b.order)
+    .map((h) => ({
+      id: h.id,
+      title: h.title,
+      source: h.source,
+      language: h.language,
+      refrain: h.refrain,
+      verses: h.verses,
+      translation: h.translation?.[locale],
+    }));
+}
+
+// ── Ceremonies ───────────────────────────────────────────
+
+export async function getCeremonies(locale: Locale) {
+  return ceremonies
+    .sort((a, b) => a.order - b.order)
+    .map((c) => ({
+      id: c.id,
+      title: c.title[locale],
+      source: c.source,
+      description: c.description[locale],
+      steps: c.steps[locale],
+    }));
 }

@@ -32,8 +32,12 @@ export default function Header({
       label: dict.nav.about,
       children: [
         { href: `/${locale}/histoire`, label: dict.nav.history },
+        { href: `/${locale}/doctrine`, label: dict.nav.doctrine },
         { href: `/${locale}/dirigeants`, label: dict.nav.leaders },
         { href: `/${locale}/vieillards`, label: dict.nav.elders },
+        { href: `/${locale}/prieres`, label: dict.nav.prayers },
+        { href: `/${locale}/cantiques`, label: dict.nav.hymns },
+        { href: `/${locale}/ceremonies`, label: dict.nav.ceremonies },
       ],
     },
     { kind: "link", href: `/${locale}/recits`, label: dict.nav.stories },
